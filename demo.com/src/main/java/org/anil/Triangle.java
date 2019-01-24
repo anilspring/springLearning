@@ -50,7 +50,7 @@ public class Triangle implements ApplicationContextAware,BeanNameAware{
 
 	public void setBeanName(String beanName) {
 		// TODO Auto-generated method stub
-		System.out.println("BeanName is:"+ beanName);
+		System.out.println("BeanName is :"+ beanName);
 	}
 
 }
