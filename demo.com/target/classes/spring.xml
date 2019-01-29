@@ -37,6 +37,6 @@
     </bean>
     <bean class="org.anil.BeanFactoryPP"></bean>
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-                <property name="locations" value ="pointsconfig.properties" />  
+                <property name="locations" value ="pointsconfig2.properties" />  
     </bean>
 </beans>
