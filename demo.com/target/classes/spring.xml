@@ -3,9 +3,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"
+        default-init-method="myInit" default-destroy-method="cleanUp"> <!-- bean definitions here -->
     <!-- bean definitions here -->
-    <bean id="parenttriangle" class="org.anil.Triangle" >
+<!--     <bean id="parenttriangle" class="org.anil.Triangle" >
         <property name="pointA" ref="pointA" />
     </bean>
     <bean id="triangle1" class="org.anil.Triangle" parent="parenttriangle">
@@ -15,6 +16,12 @@
        <bean id="triangle2" class="org.anil.Triangle" parent="parenttriangle">
         <property name="pointB" ref="pointB" /> 
         </bean>
+     -->
+     <bean id ="triangle" class="org.anil.Triangle"  >
+              <property name="pointA" ref="pointA" />
+     		  <property name="pointB" ref="pointB" />
+     		  <property name="pointC" ref="pointC" />
+  </bean>
     
     <bean id="pointA" class="org.anil.Point">
          <property name="x" value="0" />
@@ -28,4 +35,5 @@
          <property name="x" value="20" />
          <property name="y" value="0" />
     </bean>
+    <bean class="org.anil.DisplayNameBeanPostProcessor"></bean>
 </beans>
