@@ -17,11 +17,11 @@
         <property name="pointB" ref="pointB" /> 
         </bean>
      -->
-      <bean id ="triangle" class="org.anil.Triangle"  >
+      <!-- <bean id ="triangle" class="org.anil.Triangle"  >
               <property name="pointA" ref="pointA" />
      		  <property name="pointB" ref="pointB" />
      		  <property name="pointC" ref="pointC" />
-      </bean>
+      </bean> -->
     
     <bean id="pointA" class="org.anil.Point">
     <qualifier value="circleRelated"/>
@@ -32,17 +32,18 @@
          <property name="x" value="-20" />
          <property name="y" value="0" />
     </bean>
-     <bean id="pointC" class="org.anil.Point">
+     <bean id="center" class="org.anil.Point">
          <property name="x" value="20" />
          <property name="y" value="0" /> 
      </bean> 
-    <bean class="org.anil.BeanFactoryPP"></bean>
+  <!--   <bean class="org.anil.BeanFactoryPP"></bean>
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
                 <property name="locations" value ="pointsconfig2.properties" />  
-  </bean>
-     <bean id ="circle" class="org.anil.Circle"  >
-   </bean>
+  </bean> -->
+   <!--   <bean id ="circle" class="org.anil.Circle"  >
+   </bean> -->
   <!--  <bean  class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>  	 -->	
  <!--   <bean  class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>   -->
         <context:annotation-config/>
+        <context:component-scan base-package="org.anil"/>
 </beans>
