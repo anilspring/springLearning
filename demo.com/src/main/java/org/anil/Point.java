@@ -4,7 +4,7 @@ public class Point {
 private int x;
 private int y;
 
-public int getX() {
+public Object getX() {
 	return x;
 }
 public void setX(int x) {
